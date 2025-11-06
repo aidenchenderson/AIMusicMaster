@@ -1,0 +1,70 @@
+Model: phi3:3.8b
+Initial resource usage:
+%CPU %MEM
+ 0.0  0.2
+execution time: 56.853478532 seconds
+Post-prompt resource usage:
+%CPU %MEM
+ 253 22.8
+
+--------------------------------
+Model: gemma3:4b
+Initial resource usage:
+%CPU %MEM
+ 253 22.8
+execution time: 295.232288511 seconds
+Post-prompt resource usage:
+%CPU %MEM
+ 337 25.7
+
+--------------------------------
+Model: gemma3:1b
+Initial resource usage:
+%CPU %MEM
+ 337 25.7
+execution time: 94.460465518 seconds
+Post-prompt resource usage:
+%CPU %MEM
+ 341  7.8
+
+--------------------------------
+Model: deepseek-r1:7b
+Initial resource usage:
+%CPU %MEM
+ 340  7.8
+execution time: 527.836280221 seconds
+Post-prompt resource usage:
+%CPU %MEM
+ 361 29.8
+
+--------------------------------
+Model: deepseek-r1:1.5b
+Initial resource usage:
+%CPU %MEM
+ 361 29.8
+execution time: 169.938208818 seconds
+Post-prompt resource usage:
+%CPU %MEM
+ 365  7.8
+
+--------------------------------
+Model: qwen3-vl:4b
+Initial resource usage:
+%CPU %MEM
+ 365  7.8
+execution time: 1041.591544145 seconds
+Post-prompt resource usage:
+%CPU %MEM
+ 380 25.8
+
+--------------------------------
+Model: qwen3-vl:8b
+Initial resource usage:
+%CPU %MEM
+ 380 25.8
+execution time: 1666.152684187 seconds
+Post-prompt resource usage:
+%CPU %MEM
+ 379 40.9
+
+--------------------------------
