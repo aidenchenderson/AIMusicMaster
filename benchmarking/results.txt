@@ -1,70 +1,55 @@
+Model: tinyllama:1.1b
+execution time: 50.338797451 seconds
+max CPU usage: 100.00%
+max mem usage: 0.10%
+--------------------------------
+Model: llama3.2:1b
+execution time: 60.760873041 seconds
+max CPU usage: 386.00%
+max mem usage: 9.20%
+--------------------------------
+Model: gemma3:270m
+execution time: 15.132703590 seconds
+max CPU usage: 333.00%
+max mem usage: 3.50%
+--------------------------------
+Model: smollm2:1.7b
+execution time: 106.182322733 seconds
+max CPU usage: 391.00%
+max mem usage: 16.00%
+--------------------------------
+Model: smollm2:360m
+execution time: 40.388108254 seconds
+max CPU usage: 386.00%
+max mem usage: 5.60%
+--------------------------------
+Model: smollm2:135m
+execution time: 20.141417732 seconds
+max CPU usage: 379.00%
+max mem usage: 2.50%
+--------------------------------
+Model: phi3:latest
+execution time: 238.214515952 seconds
+max CPU usage: 394.00%
+max mem usage: 22.90%
+--------------------------------
 Model: phi3:3.8b
-Initial resource usage:
-%CPU %MEM
- 0.0  0.2
-execution time: 56.853478532 seconds
-Post-prompt resource usage:
-%CPU %MEM
- 253 22.8
-
+execution time: 298.956571309 seconds
+max CPU usage: 50.00%
+max mem usage: 0.10%
 --------------------------------
 Model: gemma3:4b
-Initial resource usage:
-%CPU %MEM
- 253 22.8
-execution time: 295.232288511 seconds
-Post-prompt resource usage:
-%CPU %MEM
- 337 25.7
-
+execution time: 127.099880157 seconds
+max CPU usage: 387.00%
+max mem usage: 25.60%
 --------------------------------
 Model: gemma3:1b
-Initial resource usage:
-%CPU %MEM
- 337 25.7
-execution time: 94.460465518 seconds
-Post-prompt resource usage:
-%CPU %MEM
- 341  7.8
-
---------------------------------
-Model: deepseek-r1:7b
-Initial resource usage:
-%CPU %MEM
- 340  7.8
-execution time: 527.836280221 seconds
-Post-prompt resource usage:
-%CPU %MEM
- 361 29.8
-
+execution time: 50.701299716 seconds
+max CPU usage: 375.00%
+max mem usage: 7.80%
 --------------------------------
 Model: deepseek-r1:1.5b
-Initial resource usage:
-%CPU %MEM
- 361 29.8
-execution time: 169.938208818 seconds
-Post-prompt resource usage:
-%CPU %MEM
- 365  7.8
-
---------------------------------
-Model: qwen3-vl:4b
-Initial resource usage:
-%CPU %MEM
- 365  7.8
-execution time: 1041.591544145 seconds
-Post-prompt resource usage:
-%CPU %MEM
- 380 25.8
-
---------------------------------
-Model: qwen3-vl:8b
-Initial resource usage:
-%CPU %MEM
- 380 25.8
-execution time: 1666.152684187 seconds
-Post-prompt resource usage:
-%CPU %MEM
- 379 40.9
-
+execution time: 197.285559569 seconds
+max CPU usage: 391.00%
+max mem usage: 7.80%
 --------------------------------

@@ -1,7 +1,11 @@
+tinyllama:1.1b
+llama3.2:1b
+gemma3:270m
+smollm2:1.7b
+smollm2:360m
+smollm2:135m
+phi3:latest
 phi3:3.8b
 gemma3:4b
 gemma3:1b
-deepseek-r1:7b
 deepseek-r1:1.5b
-qwen3-vl:4b
-qwen3-vl:8b
