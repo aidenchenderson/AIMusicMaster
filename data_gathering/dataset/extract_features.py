@@ -12,7 +12,7 @@ def extract_features(filepath):
     try:
         y, sr = librosa.load(filepath, sr=None, duration=30)
     except Exception as e:
-        print(f"[SKIP] Could not load {filepath}: {e}")
+        print(f"skipping, could not load {filepath}: {e}")
         return None
 
     try:
