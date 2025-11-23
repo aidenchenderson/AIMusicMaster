@@ -16,5 +16,6 @@
 
 # dataset files
 /data_gathering/dataset/fma_medium
+/data_gathering/dataset/fma_spectrograms
 *.zip
 *.csv
