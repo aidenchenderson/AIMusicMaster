@@ -32,7 +32,7 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 	
 # utility
-.PHONY: clean rebuild run
+.PHONY: clean rebuild run run-no-warn
 clean:
 	rm -rf $(BUILD_DIR) $(BIN_DIR)
 
@@ -40,3 +40,6 @@ rebuild: clean all
 
 run: $(TARGET)
 	$(TARGET)
+
+run-no-warn: $(TARGET)
+	$(TARGET) 2>/dev/null
