@@ -7,8 +7,11 @@
 *.csproj.user
 
 # build artifacts
+/app/backend/bin
 /app/backend/build
+/app/frontend/bin
 /app/frontend/build
+/app/AI/bin
 /app/AI/build
 *.o
 *.out
