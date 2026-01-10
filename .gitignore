@@ -7,12 +7,8 @@
 *.csproj.user
 
 # build artifacts
-/app/backend/bin
-/app/backend/build
-/app/frontend/bin
-/app/frontend/build
-/app/AI/bin
-/app/AI/build
+/app/bin
+/app/build
 *.o
 *.out
 *.exe
@@ -21,4 +17,3 @@
 /data_gathering/dataset/fma_medium
 /data_gathering/dataset/fma_spectrograms
 *.zip
-*.csv
