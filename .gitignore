@@ -9,6 +9,7 @@
 # build artifacts
 /app/bin
 /app/build
+/tests/build
 *.o
 *.out
 *.exe
@@ -17,3 +18,7 @@
 /data_gathering/dataset/fma_medium
 /data_gathering/dataset/fma_spectrograms
 *.zip
+
+# system files
+.DS_Store
+__pycache__/
