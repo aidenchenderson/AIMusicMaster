@@ -53,6 +53,9 @@ ma_pcm_rb *AudioEngine::get_ring_buffer() {
 }
 
 void AudioEngine::data_callback(ma_device* device, void* output, const void* input, ma_uint32 frame_count) {
+    // only capturing input, ignore output
+    (void)output;
+
     AudioEngine* engine = (AudioEngine*) device->pUserData;
 
     ma_uint32 framesToWrite = frame_count;
@@ -61,6 +64,7 @@ void AudioEngine::data_callback(ma_device* device, void* output, const void* inp
     ma_result res = ma_pcm_rb_acquire_write(&engine->ring_buffer, &framesToWrite, (void**)&bufferOut);
     
     if (res == MA_SUCCESS && framesToWrite > 0) {
+        // copy signal data from the hardware to the ring buffer
         memcpy(bufferOut, input, framesToWrite * sizeof(float));
 
         ma_pcm_rb_commit_write(&engine->ring_buffer, framesToWrite);
