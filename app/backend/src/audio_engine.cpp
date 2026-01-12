@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+#include <cstring>
 
 #include "miniaudio.h"
 #include "audio_engine.hpp"

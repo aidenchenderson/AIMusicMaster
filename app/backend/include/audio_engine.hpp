@@ -1,8 +1,7 @@
 #ifndef AUDIO_ENGINE_H
 #define AUDIO_ENGINE_H
 
-#include <vector>
-
+#include <cstring>
 #include "miniaudio.h"
 
 class AudioEngine {
