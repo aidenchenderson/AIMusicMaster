@@ -1,3 +1,6 @@
+#ifndef H_FEATURE_WRITER
+#define H_FEATURE_WRITER
+
 #include <string>
 #include <stdlib.h>
 #include <stdio.h>
@@ -6,17 +9,17 @@
 
 class FeatureWriter {
     private:
-        std::string filePath;
+        std::string file_path;
         std::ofstream file;
-        bool isOpen = false;
+        bool is_open = false;
 
     public:
-        FeatureWriter(const std::string& filePath);
+        FeatureWriter(const std::string& file_path);
         ~FeatureWriter();
 
-        void openFile();
-        void writeRow(std::vector<float> &features);
-        void closeFile();
-
-
+        void open_file();
+        void write_row(std::vector<float> &features);
+        void close_file();
 };
+
+#endif // H_FEATURE_WRITER

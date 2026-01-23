@@ -3,11 +3,11 @@
 #include <vector>
 #include <stdio.h> 
 
-#include "../include/feature_writer.hpp"
+#include "feature_writer.hpp"
 
-FeatureWriter::FeatureWriter(const std::string& filePath) {
+FeatureWriter::FeatureWriter(const std::string& file_path) {
     // Initialize file path
-    this->filePath = filePath;
+    this->file_path = file_path;
 }
 
 FeatureWriter::~FeatureWriter() {
@@ -17,17 +17,17 @@ FeatureWriter::~FeatureWriter() {
     }
 }
 
-void FeatureWriter::openFile() {
+void FeatureWriter::open_file() {
     // Open file, throw error if fails
-    file.open(this->filePath);
+    file.open(this->file_path);
     if(!file.is_open()){
         throw std::runtime_error("Failed to open CSV file");
     }
-    isOpen = true;
+    is_open = true;
 }
 
-void FeatureWriter::writeRow(std::vector<float> &features){
-    if(!isOpen){
+void FeatureWriter::write_row(std::vector<float> &features){
+    if(!is_open){
         throw std::runtime_error("File not open");
     }
     // Write features in separate collumns of a new row
@@ -40,12 +40,12 @@ void FeatureWriter::writeRow(std::vector<float> &features){
     file << "\n";
 }
 
-void FeatureWriter::closeFile(){
+void FeatureWriter::close_file(){
     // Flush file and close
-    if(isOpen){
+    if(is_open){
         file.flush();
         file.close();
-        isOpen = false;
+        is_open = false;
     }
 }
 
