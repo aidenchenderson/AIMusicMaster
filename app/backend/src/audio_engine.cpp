@@ -1,6 +1,8 @@
-#include "audio_engine.hpp"
 #include <iostream>
 #include <cstring>
+
+#include "miniaudio.h"
+#include "audio_engine.hpp"
 
 
 AudioEngine::AudioEngine(ma_uint32 capture_device_index) : device_index(capture_device_index) {}
