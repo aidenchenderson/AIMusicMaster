@@ -22,6 +22,7 @@ AudioEngine::InitResult AudioEngine::init() {
         std::cerr << "failed to initialize audio context \n";
         return InitResult::context_failure;
     }
+    context_initialized = true;
 
     // initialize a ring buffer to decouple real-time audio capture from downstream processing
     ma_result rb_res = ma_pcm_rb_init(ma_format_f32, CHANNELS, SAMPLE_RATE * RECORD_SEC, nullptr, nullptr, &ring_buffer);
@@ -29,6 +30,7 @@ AudioEngine::InitResult AudioEngine::init() {
         std::cerr << "ma_pcm_rb_init failed: " << ma_result_description(rb_res) << "\n";
         return InitResult::ring_buffer_failure;
     }
+    ring_buffer_initialized = true;
 
     // query all detected audio devices, for selecting the capture device by index
     ma_device_info* capture_infos;
@@ -57,6 +59,7 @@ AudioEngine::InitResult AudioEngine::init() {
         std::cerr << "ma_device_init failed: " << ma_result_description(dev_res) << "\n";
         return InitResult::device_failure;
     }
+    device_initialized = true;
 
     init_result = InitResult::success;
     return init_result;
@@ -142,12 +145,33 @@ bool AudioEngine::read_chunk(float* out, ma_uint32 frames)
 
 
 /**
+ * Device enumeration (static)
+ * - Lists all detected audio capture devices without needing an engine instance
+ */
+std::vector<std::string> AudioEngine::get_capture_devices() {
+    ma_context ctx;
+    std::vector<std::string> devices;
+
+    if (ma_context_init(nullptr, 0, nullptr, &ctx) != MA_SUCCESS) return devices; 
+
+    ma_device_info* infos;
+    ma_uint32 count;
+    ma_context_get_devices(&ctx, nullptr, nullptr, &infos, &count);
+
+    for (ma_uint32 i = 0; i < count; ++i) {
+        devices.emplace_back(infos[i].name);
+    }
+
+    ma_context_uninit(&ctx);
+    return devices;
+}
+
+
+/**
  * Destroy the audio engine and release all resources used
  */
 AudioEngine::~AudioEngine() {
-    if (init_result == InitResult::success) {
-        ma_device_uninit(&audio_device);
-        ma_pcm_rb_uninit(&ring_buffer);
-        ma_context_uninit(&context);
-    }
+    if (device_initialized) ma_device_uninit(&audio_device);
+    if (ring_buffer_initialized) ma_pcm_rb_uninit(&ring_buffer);
+    if (context_initialized) ma_context_uninit(&context);
 }

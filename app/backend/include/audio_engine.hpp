@@ -26,9 +26,15 @@ public:
     InitResult init();
     void start();
     void stop();
+
     bool read_chunk(float* out, ma_uint32 frames);
 
     ma_pcm_rb* get_ring_buffer();
+
+    static std::vector<std::string> get_capture_devices();
+
+    AudioEngine(const AudioEngine&) = delete;
+    AudioEngine& operator=(const AudioEngine&) = delete;
 
 private:
     static void data_callback(
@@ -44,6 +50,10 @@ private:
     ma_pcm_rb ring_buffer{};
     ma_uint32 device_index;
     InitResult init_result = InitResult::context_failure;
+
+    bool context_initialized = false;
+    bool device_initialized = false;
+    bool ring_buffer_initialized = false;
 };
 
 #endif // AUDIO_ENGINE_H
