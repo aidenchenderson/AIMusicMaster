@@ -6,86 +6,86 @@
     {
       "number": 1,
       "beats": [
-        {"beat": 1, "string": 4, "fret": 7},
-        {"beat": 1, "string": 3, "fret": 7},
-        {"beat": 1, "string": 2, "fret": 8},
-        {"beat": 3, "string": 4, "fret": 5},
-        {"beat": 3, "string": 3, "fret": 5},
-        {"beat": 3, "string": 2, "fret": 6}
+        { "beat": 1, "string": 4, "fret": 7 },
+        { "beat": 1, "string": 3, "fret": 7 },
+        { "beat": 1, "string": 2, "fret": 8 },
+        { "beat": 3, "string": 4, "fret": 5 },
+        { "beat": 3, "string": 3, "fret": 5 },
+        { "beat": 3, "string": 2, "fret": 6 }
       ]
     },
     {
       "number": 2,
       "beats": [
-        {"beat": 1, "string": 5, "fret": 3},
-        {"beat": 1, "string": 4, "fret": 5},
-        {"beat": 1, "string": 3, "fret": 4},
-        {"beat": 3, "string": 3, "fret": 7},
-        {"beat": 4, "string": 4, "fret": 5}
+        { "beat": 1, "string": 5, "fret": 3 },
+        { "beat": 1, "string": 4, "fret": 5 },
+        { "beat": 1, "string": 3, "fret": 4 },
+        { "beat": 3, "string": 3, "fret": 7 },
+        { "beat": 4, "string": 4, "fret": 5 }
       ]
     },
     {
       "number": 3,
       "beats": [
-        {"beat": 1, "string": 5, "fret": 5},
-        {"beat": 1, "string": 4, "fret": 7},
-        {"beat": 1, "string": 3, "fret": 6},
-        {"beat": 3, "string": 5, "fret": 7},
-        {"beat": 3, "string": 4, "fret": 9},
-        {"beat": 3, "string": 3, "fret": 8}
+        { "beat": 1, "string": 5, "fret": 5 },
+        { "beat": 1, "string": 4, "fret": 7 },
+        { "beat": 1, "string": 3, "fret": 6 },
+        { "beat": 3, "string": 5, "fret": 7 },
+        { "beat": 3, "string": 4, "fret": 9 },
+        { "beat": 3, "string": 3, "fret": 8 }
       ]
     },
     {
       "number": 4,
       "beats": [
-        {"beat": 1, "string": 4, "fret": 7},
-        {"beat": 1, "string": 3, "fret": 7},
-        {"beat": 2, "string": 4, "fret": 9},
-        {"beat": 3, "string": 3, "fret": 7},
-        {"beat": 4, "string": 4, "fret": 5}
+        { "beat": 1, "string": 4, "fret": 7 },
+        { "beat": 1, "string": 3, "fret": 7 },
+        { "beat": 2, "string": 4, "fret": 9 },
+        { "beat": 3, "string": 3, "fret": 7 },
+        { "beat": 4, "string": 4, "fret": 5 }
       ]
     },
     {
       "number": 5,
       "beats": [
-        {"beat": 1, "string": 4, "fret": 7},
-        {"beat": 1, "string": 3, "fret": 7},
-        {"beat": 1, "string": 2, "fret": 8},
-        {"beat": 3, "string": 4, "fret": 5},
-        {"beat": 3, "string": 3, "fret": 5},
-        {"beat": 3, "string": 2, "fret": 6}
+        { "beat": 1, "string": 4, "fret": 7 },
+        { "beat": 1, "string": 3, "fret": 7 },
+        { "beat": 1, "string": 2, "fret": 8 },
+        { "beat": 3, "string": 4, "fret": 5 },
+        { "beat": 3, "string": 3, "fret": 5 },
+        { "beat": 3, "string": 2, "fret": 6 }
       ]
     },
     {
       "number": 6,
       "beats": [
-        {"beat": 1, "string": 5, "fret": 3},
-        {"beat": 1, "string": 4, "fret": 5},
-        {"beat": 1, "string": 3, "fret": 4},
-        {"beat": 3, "string": 5, "fret": 5},
-        {"beat": 3, "string": 4, "fret": 7},
-        {"beat": 3, "string": 3, "fret": 6}
+        { "beat": 1, "string": 5, "fret": 3 },
+        { "beat": 1, "string": 4, "fret": 5 },
+        { "beat": 1, "string": 3, "fret": 4 },
+        { "beat": 3, "string": 5, "fret": 5 },
+        { "beat": 3, "string": 4, "fret": 7 },
+        { "beat": 3, "string": 3, "fret": 6 }
       ]
     },
     {
       "number": 7,
       "beats": [
-        {"beat": 1, "string": 5, "fret": 5},
-        {"beat": 1, "string": 4, "fret": 7},
-        {"beat": 2, "string": 4, "fret": 9},
-        {"beat": 3, "string": 4, "fret": 7},
-        {"beat": 4, "string": 4, "fret": 5}
+        { "beat": 1, "string": 5, "fret": 5 },
+        { "beat": 1, "string": 4, "fret": 7 },
+        { "beat": 2, "string": 4, "fret": 9 },
+        { "beat": 3, "string": 4, "fret": 7 },
+        { "beat": 4, "string": 4, "fret": 5 }
       ]
     },
     {
       "number": 8,
       "beats": [
-        {"beat": 1, "string": 4, "fret": 7},
-        {"beat": 1, "string": 3, "fret": 7},
-        {"beat": 1, "string": 2, "fret": 8},
-        {"beat": 3, "string": 4, "fret": 7},
-        {"beat": 3, "string": 3, "fret": 7},
-        {"beat": 3, "string": 2, "fret": 8}
+        { "beat": 1, "string": 4, "fret": 7 },
+        { "beat": 1, "string": 3, "fret": 7 },
+        { "beat": 1, "string": 2, "fret": 8 },
+        { "beat": 3, "string": 4, "fret": 7 },
+        { "beat": 3, "string": 3, "fret": 7 },
+        { "beat": 3, "string": 2, "fret": 8 }
       ]
     }
   ]

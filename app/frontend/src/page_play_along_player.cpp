@@ -34,21 +34,8 @@ void renderEndBar(WINDOW* win, int startX, int startY) {
         mvwprintw(win, startY + i, startX, "%s----|----|----|----", strings[i]);
     }
     
-    // Draw "END" in ASCII art style in the middle of the bar
-    // E
-    mvwprintw(win, startY + 1, startX + 7, "|--");
-    mvwprintw(win, startY + 2, startX + 7, "|_ ");
-    mvwprintw(win, startY + 3, startX + 7, "|__");
-    
-    // N
-    mvwprintw(win, startY + 1, startX + 11, "|\\ ");
-    mvwprintw(win, startY + 2, startX + 11, "| \\");
-    mvwprintw(win, startY + 3, startX + 11, "|  ");
-    
-    // D
-    mvwprintw(win, startY + 1, startX + 15, "|\\");
-    mvwprintw(win, startY + 2, startX + 15, "| ");
-    mvwprintw(win, startY + 3, startX + 15, "|/");
+    // Draw "END" text in the center more cleanly
+    mvwprintw(win, startY + 2, startX + 8, "E N D");
 }
 
 PageResult runPlayAlongPlayerPage(WINDOW* win, const UIContext& ctx) {
@@ -79,22 +66,12 @@ PageResult runPlayAlongPlayerPage(WINDOW* win, const UIContext& ctx) {
         werase(win);
         box(win, '|', '-');
         
-        // Title and instructions with count-in/bar info inline
-        if (currentBar < 0) {
-            // Count-in only for bars -2 and -1 (8 beats total)
-            int totalCountIn = (currentBar + 2) * 4 + currentBeat;
-            mvwprintw(win, 1, 2, "%s - %d BPM | Count-in: %d/8 | Press 'q' or ESC to finish", 
-                      ctx.trackData.title.c_str(), ctx.trackData.bpm, totalCountIn);
-        } else {
-            // Show bar number for actual track
-            mvwprintw(win, 1, 2, "%s - %d BPM | Bar %d/%d | Press 'q' or ESC to finish", 
-                      ctx.trackData.title.c_str(), ctx.trackData.bpm, 
-                      currentBar + 1, (int)ctx.trackData.bars.size());
-        }
-        
-        int tabStartY = 4;
-        int tabStartX = 4;
+        // Calculate layout positions
+        int tabStartY = 2;
+        int tabStartX = 2;
         int barSpacing = 22;
+        int wallX = tabStartX + barSpacing * 3;
+        int infoX = wallX + 3;
         
         // Calculate which bars to display (always show 3 bars)
         // Display: prev bar (left), current bar with indicator (middle), next bar (right)
@@ -147,6 +124,29 @@ PageResult runPlayAlongPlayerPage(WINDOW* win, const UIContext& ctx) {
                 mvwprintw(win, tabStartY + i, tabStartX + barSpacing * 2, "%s----|----|----|----", strings[i]);
             }
         }
+        
+        // Draw vertical separator wall after third bar
+        for (int i = 0; i < 6; i++) {
+            mvwprintw(win, tabStartY + i, wallX, "|");
+        }
+        
+        // Draw info panel on the right side
+        int infoY = 1;
+        mvwprintw(win, infoY++, infoX, "Track:");
+        mvwprintw(win, infoY++, infoX, "  %s", ctx.trackData.title.c_str());
+        infoY++;
+        
+        if (currentBar < 0) {
+            int totalCountIn = (currentBar + 2) * 4 + currentBeat;
+            mvwprintw(win, infoY++, infoX, "BPM: %d | Count: %d/8", ctx.trackData.bpm, totalCountIn);
+        } else {
+            mvwprintw(win, infoY++, infoX, "BPM: %d | Bar: %d/%d", ctx.trackData.bpm, currentBar + 1, (int)ctx.trackData.bars.size());
+        }
+        infoY++;
+        
+        mvwprintw(win, infoY++, infoX, "Controls:");
+        mvwprintw(win, infoY++, infoX, "  q - Quit");
+        mvwprintw(win, infoY++, infoX, "  ESC - Exit");
         
         wrefresh(win);
         

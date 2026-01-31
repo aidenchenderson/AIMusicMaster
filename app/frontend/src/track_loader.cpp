@@ -8,6 +8,12 @@ bool loadTrack(const std::string& filename, Track& track) {
     if (!file.is_open()) {
         return false;
     }
+    
+    // Clear any existing track data
+    track.title.clear();
+    track.timeSignature.clear();
+    track.bpm = 0;
+    track.bars.clear();
 
     std::string line;
     std::string content;
