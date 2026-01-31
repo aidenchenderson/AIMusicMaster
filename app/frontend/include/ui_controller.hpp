@@ -4,7 +4,7 @@
 #include <string>
 
 // Function to run the main UI loop
-// Returns the selected device when user makes a selection
+// Returns the selected device when user exits
 std::string runMainUI();
 
 #endif // UI_CONTROLLER_HPP
