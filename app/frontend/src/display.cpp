@@ -33,6 +33,9 @@ std::string runMainUI() {
             case PageId::PlayAlongList:
                 result = runPlayAlongListPage(win, ctx);
                 break;
+            case PageId::PlayAlongPlayer:
+                result = runPlayAlongPlayerPage(win, ctx);
+                break;
             case PageId::SoloStart:
                 result = runSoloStartPage(win, ctx);
                 break;

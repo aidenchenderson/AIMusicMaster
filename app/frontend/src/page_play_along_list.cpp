@@ -2,12 +2,19 @@
 #include <string>
 #include <vector>
 #include "ui_pages.hpp"
+#include "track_loader.hpp"
 
 PageResult runPlayAlongListPage(WINDOW* win, const UIContext& ctx) {
     std::vector<std::string> tracks = {
         "Track 01 - Blues Jam",
         "Track 02 - Rock Groove",
         "Track 03 - Jazz Swing"
+    };
+    
+    std::vector<std::string> filenames = {
+        "data/tracks/blues_jam.json",
+        "data/tracks/rock_groove.json",
+        "data/tracks/jazz_swing.json"
     };
 
     int highlighted = 0;
@@ -53,8 +60,16 @@ PageResult runPlayAlongListPage(WINDOW* win, const UIContext& ctx) {
             case KEY_ENTER: {
                 UIContext nextCtx = ctx;
                 nextCtx.selectedTrack = tracks[highlighted];
+                nextCtx.trackFilename = filenames[highlighted];
                 nextCtx.playAlong = true;
-                return {PageId::Summary, nextCtx};
+                
+                // Load track data
+                if (!loadTrack(nextCtx.trackFilename, nextCtx.trackData)) {
+                    // Failed to load, stay on this page
+                    continue;
+                }
+                
+                return {PageId::PlayAlongPlayer, nextCtx};
             }
             case KEY_LEFT:
                 return {PageId::MainMenu, ctx};

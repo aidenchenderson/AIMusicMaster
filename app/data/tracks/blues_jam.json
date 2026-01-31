@@ -1,0 +1,79 @@
+{
+  "title": "Track 01 - Blues Jam",
+  "bpm": 90,
+  "timeSignature": "4/4",
+  "bars": [
+    {
+      "number": 1,
+      "beats": [
+        {"beat": 1, "string": 6, "fret": 3},
+        {"beat": 2, "string": 6, "fret": 3},
+        {"beat": 3, "string": 5, "fret": 3},
+        {"beat": 4, "string": 5, "fret": 3}
+      ]
+    },
+    {
+      "number": 2,
+      "beats": [
+        {"beat": 1, "string": 6, "fret": 3},
+        {"beat": 2, "string": 5, "fret": 3},
+        {"beat": 3, "string": 4, "fret": 3},
+        {"beat": 4, "string": 4, "fret": 3}
+      ]
+    },
+    {
+      "number": 3,
+      "beats": [
+        {"beat": 1, "string": 5, "fret": 5},
+        {"beat": 2, "string": 5, "fret": 5},
+        {"beat": 3, "string": 4, "fret": 5},
+        {"beat": 4, "string": 5, "fret": 5}
+      ]
+    },
+    {
+      "number": 4,
+      "beats": [
+        {"beat": 1, "string": 6, "fret": 3},
+        {"beat": 2, "string": 5, "fret": 3},
+        {"beat": 3, "string": 4, "fret": 3},
+        {"beat": 4, "string": 5, "fret": 5}
+      ]
+    },
+    {
+      "number": 5,
+      "beats": [
+        {"beat": 1, "string": 6, "fret": 3},
+        {"beat": 2, "string": 6, "fret": 3},
+        {"beat": 3, "string": 5, "fret": 3},
+        {"beat": 4, "string": 4, "fret": 3}
+      ]
+    },
+    {
+      "number": 6,
+      "beats": [
+        {"beat": 1, "string": 5, "fret": 5},
+        {"beat": 2, "string": 4, "fret": 5},
+        {"beat": 3, "string": 4, "fret": 3},
+        {"beat": 4, "string": 5, "fret": 3}
+      ]
+    },
+    {
+      "number": 7,
+      "beats": [
+        {"beat": 1, "string": 6, "fret": 3},
+        {"beat": 2, "string": 5, "fret": 3},
+        {"beat": 3, "string": 4, "fret": 5},
+        {"beat": 4, "string": 5, "fret": 5}
+      ]
+    },
+    {
+      "number": 8,
+      "beats": [
+        {"beat": 1, "string": 6, "fret": 3},
+        {"beat": 2, "string": 5, "fret": 3},
+        {"beat": 3, "string": 4, "fret": 3},
+        {"beat": 4, "string": 6, "fret": 3}
+      ]
+    }
+  ]
+}
